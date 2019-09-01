@@ -28,16 +28,16 @@ const mockData = [
 ]
 
 const punches = [
-  ['beat the meat out of'],
+  ['beated the meat out of'],
   ['knocked n-times into'],
   ['had sex with'],
-  ['']
+  ['investigated some holes of']
 ];
 
 const getRandomInt = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min)) + min
 
-const FeedMenu = () => {
+const Feed = () => {
   function getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
@@ -67,4 +67,4 @@ const FeedMenu = () => {
   )
 }
 
-export default FeedMenu
+export default Feed
