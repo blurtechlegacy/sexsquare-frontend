@@ -1,5 +1,5 @@
 import React from 'react';
-import './feedStyles.scss';
+import './Feed.module.scss';
 
 
 const FeedMenu = () => {
