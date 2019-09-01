@@ -1,10 +1,12 @@
+@import '../assets/bindings';
+
 .container {
   display: flex;
   flex-direction: column;
 }
 
 .button {
-  margin: 8px;
+  margin: $default-spacer;
 }
 
 .buttons {
@@ -13,7 +15,7 @@
 }
 
 .rightIcon {
-  margin-left: 8px;
+  margin-left: $default-spacer;
 }
 
 .title {
@@ -21,5 +23,5 @@
 }
 
 .input {
-  margin: 8px;
+  margin: $default-spacer;
 }
