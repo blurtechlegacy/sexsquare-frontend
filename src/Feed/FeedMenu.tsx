@@ -15,7 +15,7 @@ const FeedMenu = () => {
     return (
         <div className="listContainer">
           {a.map(i => {
-            return <div className="sexNote"></div>
+            return <div className="sexNote">{i}</div>
           })}
 
         </div>
