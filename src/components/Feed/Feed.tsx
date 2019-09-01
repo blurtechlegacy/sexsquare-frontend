@@ -29,8 +29,9 @@ const mockData = [
 
 const punches = [
   ['beat the meat out of'],
-  ['knocked n-times into', ' doors'],
-  ['have sex with'],
+  ['knocked n-times into'],
+  ['had sex with'],
+  ['']
 ];
 
 const getRandomInt = (min: number, max: number) =>
