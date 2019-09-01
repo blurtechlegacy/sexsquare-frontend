@@ -1,11 +1,15 @@
 @import '../../assets/bindings';
 
 .menuContainer {
-  display: inline-grid;
+  display: inline-block;
   width: 16.66%;
-  height: 100%!important;
+  height: 100%;
+  margin-top: 0;
+
   & .menu {
     padding-right: 20px;
+    margin: auto;
+
     & li {
       text-decoration: none;
       list-style: none;
