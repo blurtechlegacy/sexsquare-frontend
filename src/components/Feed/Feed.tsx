@@ -33,9 +33,14 @@ const mockData = [
 ]
 
 const punches = [
-  ['beat the meat out of'],
-  ['knocked n-times into'],
-  ['had sex with'],
+  'knocked n-times into',
+  'had sex with',
+  'investigated some holes of',
+]
+
+const punchesHand = [
+    'free yourself',
+    'beated the meat out'
 ]
 
 const dateFormat = (date: string) => moment(Number(date)).fromNow()
@@ -43,7 +48,7 @@ const dateFormat = (date: string) => moment(Number(date)).fromNow()
 const getRandomInt = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min)) + min
 
-const FeedMenu = () => {
+const Feed = () => {
   return (
     <div className={styles.feedContainer}>
       <AddSexNote />
@@ -60,7 +65,7 @@ const FeedMenu = () => {
                       } ${i.partners.map(
                         (item, index) => (index ? ' ' : '') + item
                       )}`
-                    : 'free yourself'}
+                    : punchesHand[getRandomInt(0, punches.length)]}
                 </div>
                 <div className={styles.timestamp}>
                   {dateFormat(i.timestamp)}
@@ -74,4 +79,4 @@ const FeedMenu = () => {
   )
 }
 
-export default FeedMenu
+export default Feed
