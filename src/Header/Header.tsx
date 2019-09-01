@@ -30,14 +30,13 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
         search: {
-            position: 'relative',
+            position: 'absolute',
             borderRadius: theme.shape.borderRadius,
             backgroundColor: fade(theme.palette.common.white, 0.15),
             '&:hover': {
                 backgroundColor: fade(theme.palette.common.white, 0.25),
             },
-            marginRight: theme.spacing(2),
-            marginLeft: 0,
+            left: '16.66%',
             width: '100%',
             [theme.breakpoints.up('sm')]: {
                 marginLeft: theme.spacing(3),
@@ -165,14 +164,15 @@ export default function PrimarySearchAppBar() {
         <div className={classes.grow}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
+                    {/*}<IconButton
                         edge="start"
                         className={classes.menuButton}
                         color="inherit"
                         aria-label="open drawer"
+
                     >
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton>*/}
                     <Typography className={classes.title} variant="h6" noWrap>
                         SexSquare
                     </Typography>
