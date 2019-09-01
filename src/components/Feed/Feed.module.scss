@@ -1,7 +1,6 @@
 @import '../../assets/bindings';
 
 .listContainer {
-
 }
 .sexNote {
   background-color: $bg-gray-l;
@@ -16,4 +15,6 @@
   display: flex;
   float: right;
   flex-direction: column;
+}
+.message {
 }

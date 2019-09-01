@@ -6,22 +6,35 @@ import styles from './Feed.module.scss'
 const mockData = [
   {
     nickname: 'MacOSO',
-    partners: ['SeagullNina', 'MacOSO'],
+    partners: ['SeagullNina'],
+    timestamp: '',
   },
   {
-    nickname: 'Vetka921',
-    partners: ['Your mom', 'Vetka921'],
+    nickname: 'SeagullNina',
+    partners: ['MacOSO'],
   },
   {
-    nickname: 'MacOSO',
-    partners: ['SeagullNina', 'MacOSO'],
+    nickname: 'Jane',
+    partners: ['John', 'Bob', 'Eugene'],
   },
-];
+  {
+    nickname: 'Bob',
+    partners: ['Eugene', 'Jane'],
+  },
+  {
+    nickname: 'John',
+    partners: [],
+  },
+]
+
 const punches = [
-  ["beat the shit out of"],
-  ["knocked n-times into","doors"],
-  ["have sex with"]
+  ['beat the meat out of'],
+  ['knocked n-times into', ' doors'],
+  ['have sex with'],
 ];
+
+const getRandomInt = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min)) + min
 
 const FeedMenu = () => {
   function getRandomInt(min: number, max: number) {
@@ -35,8 +48,16 @@ const FeedMenu = () => {
         {mockData.map(i => {
           return (
             <div key={nanoid(8)} className={styles.sexNote}>
-              {i.nickname}{' '}{punches[getRandomInt(0,punches.length)]}{' '}
-              {i.partners.map((item, index) => (index ? ', ' : '') + item)}
+              <div className={styles.message}>
+                {i.nickname}{' '}
+                {i.partners.length > 0
+                  ? `${
+                      punches[getRandomInt(0, punches.length)]
+                    } ${i.partners.map(
+                      (item, index) => (index ? ' ' : '') + item
+                    )}`
+                  : 'free yourself'}
+              </div>
             </div>
           )
         })}
