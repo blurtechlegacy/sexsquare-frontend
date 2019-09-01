@@ -1,10 +1,5 @@
 import React from 'react';
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Icon from '@material-ui/core/Icon';
+import nanoid from 'nanoid';
 import './feedStyles.scss';
 
 console.log('ok');
@@ -15,7 +10,7 @@ const FeedMenu = () => {
     return (
         <div className="listContainer">
           {a.map(i => {
-            return <div className="sexNote">{i}</div>
+            return <div key={nanoid(8)} className="sexNote">{i}</div>
           })}
 
         </div>
