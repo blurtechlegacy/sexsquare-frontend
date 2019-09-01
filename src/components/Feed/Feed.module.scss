@@ -4,10 +4,9 @@
 }
 .sexNote {
   background-color: $bg-gray-l;
-  height: 80px;
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid $bg-gray-d;
+  border-radius: $default-spacer/2;
 }
 
 .feedContainer {
@@ -17,4 +16,11 @@
   flex-direction: column;
 }
 .message {
+}
+.timestamp {
+}
+.note {
+  display: flex;
+  justify-content: space-between;
+  padding: $default-spacer;
 }
