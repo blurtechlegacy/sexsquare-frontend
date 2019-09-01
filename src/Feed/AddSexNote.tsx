@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Icon from '@material-ui/core/Icon';
+import './feedStyles.scss';
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         container: {
