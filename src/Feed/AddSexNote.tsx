@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme: Theme) =>
         button: {
             margin: theme.spacing(1),
         },
+        buttons: {
+            display: 'flex',
+            justifyContent: 'space-between',
+        },
         rightIcon: {
             marginLeft: theme.spacing(1),
         },
@@ -33,23 +37,25 @@ const AddSexNote = () => {
         <div className={classes.container}>
             <h1 className={classes.title}>Add sex note</h1>
             <Input
-                placeholder="Tell, where have you sex?"
+                placeholder="Where have you had sex?"
                 defaultValue=""
                 className={classes.input}
                 inputProps={{
                     'aria-label': 'description',
                 }}
             />
+            <div className={classes.buttons}>
             <FormControlLabel
                 value="start"
                 control={<Checkbox color="primary" />}
-                label="Start"
+                label="Private"
                 labelPlacement="start"
             />
             <Button variant="contained" color="primary" className={classes.button}>
                 Send
                 <Icon className={classes.rightIcon}>send</Icon>
             </Button>
+            </div>
         </div>
     )
 };
