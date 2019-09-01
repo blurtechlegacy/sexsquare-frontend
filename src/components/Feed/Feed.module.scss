@@ -4,22 +4,13 @@
 
 }
 .sexNote {
-  background-color: #ccc;
-  height: 100px;
+  background-color: $bg-gray-l;
+  height: 80px;
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid #555;
+  border: 1px solid $bg-gray-d;
 }
-.menuContainer {
-  display: inline-grid;
-  width: 16.66%;
-  & .menu {
-    & li {
-      text-decoration: none;
-      list-style: none;
-    }
-  }
-}
+
 .feedContainer {
   width: 83.33%;
   display: inline-grid;

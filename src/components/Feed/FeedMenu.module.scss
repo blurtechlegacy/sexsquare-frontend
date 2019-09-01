@@ -1,0 +1,27 @@
+@import '../../assets/bindings';
+
+.menuContainer {
+  display: inline-grid;
+  width: 16.66%;
+  height: 100%!important;
+  & .menu {
+    padding-right: 20px;
+    & li {
+      text-decoration: none;
+      list-style: none;
+      text-align: left;
+      border: 1px solid $nocolor;
+      padding: 5px 10px;
+      margin-bottom: 1px;
+      cursor: pointer;
+      &:hover {
+        &::before {
+          content: '';
+        }
+        background-color: $bg-gray-l;
+        border-radius: 3px;
+
+      }
+    }
+  }
+}
