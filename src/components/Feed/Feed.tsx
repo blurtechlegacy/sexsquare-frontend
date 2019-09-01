@@ -8,9 +8,26 @@ const mockData = [
     nickname: 'MacOSO',
     partners: ['SeagullNina', 'MacOSO'],
   },
+  {
+    nickname: 'Vetka921',
+    partners: ['Your mom', 'Vetka921'],
+  },
+  {
+    nickname: 'MacOSO',
+    partners: ['SeagullNina', 'MacOSO'],
+  },
+];
+const punches = [
+  ["beat the shit out of"],
+  ["knocked n-times into","doors"],
+  ["have sex with"]
 ];
 
 const FeedMenu = () => {
+  function getRandomInt(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
   return (
     <div className={styles.feedContainer}>
       <AddSexNote />
@@ -18,7 +35,7 @@ const FeedMenu = () => {
         {mockData.map(i => {
           return (
             <div key={nanoid(8)} className={styles.sexNote}>
-              {i.nickname} have sex with{' '}
+              {i.nickname}{' '}{punches[getRandomInt(0,punches.length)]}{' '}
               {i.partners.map((item, index) => (index ? ', ' : '') + item)}
             </div>
           )

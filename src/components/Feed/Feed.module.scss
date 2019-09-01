@@ -13,5 +13,7 @@
 
 .feedContainer {
   width: 83.33%;
-  display: inline-block;
+  display: flex;
+  float: right;
+  flex-direction: column;
 }
