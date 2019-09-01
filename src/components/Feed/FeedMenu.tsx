@@ -1,12 +1,12 @@
 import React from 'react';
-import './Feed.module.scss';
+import styles from './FeedMenu.module.scss';
 
 
 const FeedMenu = () => {
 
     return (
-        <div className="menuContainer">
-          <ul className="menu">
+        <div className={styles.menuContainer}>
+          <ul className={styles.menu}>
             <li>Main</li>
             <li>Fucks</li>
             <li>People</li>

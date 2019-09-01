@@ -1,0 +1,10 @@
+.menuContainer {
+  display: inline-grid;
+  width: 16.66%;
+  & .menu {
+    & li {
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+}
