@@ -8,7 +8,6 @@ import Icon from '@material-ui/core/Icon';
 import AddSexNote from "./AddSexNote";
 import './feedStyles.scss';
 
-console.log('ok');
 const a = [0,1,2,3,4,5];
 
 const FeedMenu = () => {
@@ -18,7 +17,7 @@ const FeedMenu = () => {
         <AddSexNote />
         <div className="listContainer">
           {a.map(i => {
-            return <div className="sexNote">{i}</div>
+            return <div className="sexNote" key={i}>{i}</div>
           })}
 
         </div>

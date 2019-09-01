@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from "./Header/Header";
-import Map from './Map/Map';
+import Header from "./components/Header/Header";
+import Map from './components/Map/Map';
 
 const App: React.FC = () => {
     return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import FeedMenu from "./Feed/FeedMenu"
-import Feed from "./Feed/Feed"
-import Header from "./Header/Header"
+import FeedMenu from "./components/Feed/FeedMenu"
+import Feed from "./components/Feed/Feed"
+import Header from "./components/Header/Header"
 
 const App = () => {
   return (
