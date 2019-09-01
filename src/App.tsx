@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Header from "./Header/Header";
+import AddSexNote from "./Feed/AddSexNote";
+import FeedMenu from "./Feed/FeedMenu"
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="App">
-      <Header/>
+        <FeedMenu />
+        <AddSexNote />
     </div>
   );
 }
