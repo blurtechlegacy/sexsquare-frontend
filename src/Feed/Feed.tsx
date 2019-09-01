@@ -5,22 +5,24 @@ import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Icon from '@material-ui/core/Icon';
+import AddSexNote from "./AddSexNote";
 import './feedStyles.scss';
 
+console.log('ok');
+const a = [0,1,2,3,4,5];
 
 const FeedMenu = () => {
 
     return (
-        <div className="menuContainer">
-          <ul className="menu">
-            <li>Main</li>
-            <li>Fucks</li>
-            <li>People</li>
-            <li>Tags</li>
-            <li>About</li>
+      <div className="feedContainer">
+        <AddSexNote />
+        <div className="listContainer">
+          {a.map(i => {
+            return <div className="sexNote">{i}</div>
+          })}
 
-          </ul>
         </div>
+      </div>
     )
 };
 
