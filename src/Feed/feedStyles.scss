@@ -8,3 +8,17 @@
   margin-bottom: 10px;
   border: 1px solid #555;
 }
+.menuContainer {
+  display: inline-grid;
+  width: 16.66%;
+  & .menu {
+    & li {
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+}
+.feedContainer {
+  width: 83.33%;
+  display: inline-grid;
+}
