@@ -1,0 +1,68 @@
+@import '../../assets/bindings';
+
+.grow {
+  flex-grow: 1;
+}
+
+.menuButton {
+  margin-right: $default-spacer/2,
+}
+
+.title {
+  display: none;
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
+}
+.search {
+  position: absolute;
+  border-radius: $border-radius;
+  background-color: rgba(255, 255, 255, 0.15);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  left: 16.66%;
+  width: 100%;
+  @media (min-width: $screen-sm-min) {
+    margin-left: $default-spacer*3;
+    width: auto;
+  }
+}
+
+.searchIcon {
+  width: $default-spacer*7;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+}
+
+.inputRoot {
+  color: inherit;
+}
+
+.inputInput {
+  padding: $default-spacer $default-spacer $default-spacer $default-spacer*7;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: 100%;
+  @media (min-width: $screen-md-min) {
+    width: $default-spacer*7;
+  }
+}
+
+.sectionDesktop {
+  display: none;
+  @media (min-width: $screen-md-min) {
+    display: flex;
+  }
+}
+
+.sectionMobile {
+  display: flex;
+  @media (min-width: $screen-md-min) {
+    display: none;
+  }
+}
