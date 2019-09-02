@@ -9,6 +9,13 @@ const mockData = [
     nickname: 'MacOSO',
     partners: ['SeagullNina'],
     timestamp: '1567343304874',
+    place: {
+      center: {
+        lnt: '',
+        lng: '',
+      },
+      zoom: 0,
+    },
   },
   {
     nickname: 'SeagullNina',
@@ -38,10 +45,7 @@ const punches = [
   'investigated some holes of',
 ]
 
-const punchesHand = [
-    'free yourself',
-    'beated the meat out'
-]
+const punchesHand = ['free yourself', 'beated the meat out']
 
 const dateFormat = (date: string) => moment(Number(date)).fromNow()
 
