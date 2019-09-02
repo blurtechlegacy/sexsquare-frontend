@@ -1,7 +1,7 @@
 # SexSquare
 [![Maintainability](https://api.codeclimate.com/v1/badges/cb07297f7311e790521e/maintainability)](https://codeclimate.com/github/blurtech/sexsquare-frontend/maintainability) [![GitHub issues](https://img.shields.io/github/issues/blurtech/sexsquare-frontend.svg)](https://github.com/blurtech/sexsquare-frontend/issues)  [![HitCount](http://hits.dwyl.io/blurtech/sexsquare-frontend.svg)](http://hits.dwyl.io/blurtech/sexsquare-frontend) 
 
-This application is for confident young people, girls and couples who want to add a little statistics to their relationships and attach it to the world map.  
+This application is for confident guys, girls and couples who want to add a little statistics to their relationships and attach it to the world map.  
 Check-in your sex on the world map and count it all...
 
 ## Getting Started
