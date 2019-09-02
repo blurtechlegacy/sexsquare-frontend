@@ -14,11 +14,11 @@ Check-in your sex on the world map and count it all...
 
 ## Authors
 
-* **Nina Torgunakova** - *The ideological mastermind of the project and front-end developer* - [SeagullNina](https://github.com/SeagullNina/)  
+* :crown: **Nina Torgunakova** - *The ideological mastermind of the project and front-end developer* - [SeagullNina](https://github.com/SeagullNina/)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/seagull_gna.svg?style=social&label=Follow)](https://twitter.com/seagull_gna)  
-* **Alexandr Sidorenko** - *Team Lead front-end developer* - [MacOSO](https://github.com/MacOSO)  
+* :feelsgood: **Alexandr Sidorenko** - *Team Lead front-end developer* - [MacOSO](https://github.com/MacOSO)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/batyshkaLenin.svg?style=social&label=Follow)](https://twitter.com/batyshkaLenin)  
-* **Vitaliy Shatalov** - *Front-end developer* - [tnnNull](https://github.com/tnnNull)  
+* :shipit: **Vitaly Shatalov** - *Front-end developer* - [tnnNull](https://github.com/tnnNull)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/thevetka.svg?style=social&label=Follow)](https://twitter.com/thevetka)  
 
 See also the list of [contributors](https://github.com/blurtech/sexsquare-frontend/contributors) who participated in this project.
