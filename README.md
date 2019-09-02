@@ -1,44 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SexSquare
+[![Maintainability](https://api.codeclimate.com/v1/badges/cb07297f7311e790521e/maintainability)](https://codeclimate.com/github/blurtech/sexsquare-frontend/maintainability) [![GitHub issues](https://img.shields.io/github/issues/blurtech/sexsquare-frontend.svg)](https://github.com/blurtech/sexsquare-frontend/issues)  [![HitCount](http://hits.dwyl.io/blurtech/sexsquare-frontend.svg)](http://hits.dwyl.io/blurtech/sexsquare-frontend) 
 
-## Available Scripts
+This application is for confident young people, girls and couples who want to add a little statistics to their relationships and attach it to the world map.  
+Check-in your sex on the world map and count it all...
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+`yarn install` - install dependencies.  
+`npm run start` - runs the app in the development mode.  
+`npm run build` - builds the app for production to the build folder.  
+`npm run test` - launches the test runner in the interactive watch mode.  
+`npm run eject` - this command will remove the single build dependency from your project.  
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Authors
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* **Nina Torgunakova** - *The ideological mastermind of the project and front-end developer* - [SeagullNina](https://github.com/SeagullNina/)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/seagull_gna.svg?style=social&label=Follow)](https://twitter.com/seagull_gna)  
+* **Alexandr Sidorenko** - *Team Lead front-end developer* - [MacOSO](https://github.com/MacOSO)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/batyshkaLenin.svg?style=social&label=Follow)](https://twitter.com/batyshkaLenin)  
+* **Vitaliy Shatalov** - *Front-end developer* - [tnnNull](https://github.com/tnnNull)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/thevetka.svg?style=social&label=Follow)](https://twitter.com/thevetka)  
 
-### `npm test`
+See also the list of [contributors](https://github.com/blurtech/sexsquare-frontend/contributors) who participated in this project.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deploy
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Autodeploy to Heroku: [sexsquare.blur.tech](http://sexsquare.blur.tech/) (http) or [sexsquare-frontend.herokuapp.com](https://sexsquare-frontend.herokuapp.com) (https)
