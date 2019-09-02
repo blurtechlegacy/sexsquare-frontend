@@ -6,6 +6,8 @@ Check-in your sex on the world map and count it all...
 
 ## Getting Started
 
+Before starting work on the project, it is recommended that you familiarize yourself with the document [CONTRIBUTION.md](CONTRIBUTION.md)
+
 `yarn install` - install dependencies.  
 `npm run start` - runs the app in the development mode.  
 `npm run build` - builds the app for production to the build folder.  
