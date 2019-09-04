@@ -7,27 +7,27 @@ import Map from '../Map/Map'
 
 const mockData = [
   {
-    nickname: 'MacOSO',
-    partners: ['SeagullNina'],
+    nickname: 'Elizabeth',
+    partners: ['SrgGrch'],
     timestamp: '1567343304874',
     place: {
       center: {
         lat: 54.986992,
         lng: 82.915095,
       },
-      zoom: 17,
+      zoom: 14,
     },
   },
   {
-    nickname: 'SeagullNina',
-    partners: ['MacOSO'],
+    nickname: 'SrgGrch',
+    partners: ['Elizabeth'],
     timestamp: '1567340306874',
     place: {
       center: {
         lat: 54.986660,
         lng: 82.916079,
       },
-      zoom: 17,
+      zoom: 14,
     },
   },
   {
@@ -39,7 +39,7 @@ const mockData = [
         lat: 54.983992,
         lng: 82.911095,
       },
-      zoom: 17,
+      zoom: 14,
     },
   },
   {
@@ -51,7 +51,7 @@ const mockData = [
         lat: 54.986792,
         lng: 82.915195,
       },
-      zoom: 17,
+      zoom: 14,
     },
   },
   {
@@ -63,7 +63,7 @@ const mockData = [
         lat: 54.986932,
         lng: 82.925015,
       },
-      zoom: 17,
+      zoom: 14,
     },
   },
 ]

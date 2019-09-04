@@ -1,0 +1,56 @@
+@import '../../assets/bindings';
+
+.root {
+  flex-grow: 1;
+  height: 100px;
+  width: 290px;
+}
+
+.input {
+  display: flex;
+  padding: 0;
+  height: auto;
+}
+
+.valueContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+}
+
+.chip {
+  margin: $default-spacer/2, $default-spacer/4;
+}
+
+.chipFocused {
+  background-color: green;
+}
+
+.noOptionsMessage {
+  padding: $default-spacer, $default-spacer*2;
+}
+
+.singleValue {
+  font-size: 16px;
+}
+
+.placeholder {
+  position: absolute;
+  left: 2px;
+  bottom: 6px;
+  font-size: 16px;
+}
+
+.paper {
+  position: absolute;
+  z-index: 1;
+  margin-top: $default-spacer;
+  left: 0;
+  right: 0;
+}
+
+.divider {
+  height: $default-spacer*2;
+}

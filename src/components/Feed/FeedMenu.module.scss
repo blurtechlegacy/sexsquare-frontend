@@ -3,7 +3,6 @@
 .menuContainer {
   display: flex;
   float: left;
-
   width: $s-2;
   height: 100%;
   margin-top: 20px;
@@ -19,13 +18,13 @@
       padding: 5px 10px;
       margin-bottom: 1px;
       cursor: pointer;
-      &:hover {
+      & hover {
         &::before {
           content: '';
         }
+
         background-color: $bg-gray-l;
         border-radius: 3px;
-
       }
     }
   }

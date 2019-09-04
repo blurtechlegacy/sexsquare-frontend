@@ -12,12 +12,13 @@
 }
 
 .buttons {
+  margin: $default-spacer;
   display: flex;
   justify-content: space-between;
 }
 
 .rightIcon {
-  margin-left: $default-spacer;
+  margin: $default-spacer;
 }
 
 .title {
