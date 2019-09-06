@@ -2,8 +2,6 @@ import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import { Icon } from '@iconify/react';
 import mapMarker from '@iconify/icons-mdi/map-marker';
-import { red } from '@material-ui/core/colors'
-import { red50 } from 'material-ui/styles/colors'
 
 interface ISizeProps {
   height: string
@@ -29,7 +27,7 @@ interface IProps {
   size?: ISizeProps
 }
 
-const Point = (props: any) => <Icon icon={mapMarker} width={30} height={30} />
+const Point = (props: any) => <Icon icon={mapMarker} width={40} height={40} />
 
 const Map = (props: IProps) => {
   let { size } = props

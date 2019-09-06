@@ -37,7 +37,8 @@ const suggestions: OptionType[] = [
   label: suggestion.label,
 }));
 
-function NoOptionsMessage(props: NoticeProps<OptionType>) {
+const NoOptionsMessage = (props: NoticeProps<OptionType>) =>
+{
   return (
     <Typography
       color="textSecondary"
@@ -47,15 +48,17 @@ function NoOptionsMessage(props: NoticeProps<OptionType>) {
       {props.children}
     </Typography>
   );
-}
+};
 
 type InputComponentProps = Pick<BaseTextFieldProps, 'inputRef'> & HTMLAttributes<HTMLDivElement>;
 
-function inputComponent({ inputRef, ...props }: InputComponentProps) {
+const inputComponent = ({ inputRef, ...props }: InputComponentProps) =>
+{
   return <div ref={inputRef} {...props} />;
-}
+};
 
-function Control(props: ControlProps<OptionType>) {
+const Control = (props: ControlProps<OptionType>) =>
+{
   const {
     children,
     innerProps,
@@ -80,7 +83,7 @@ function Control(props: ControlProps<OptionType>) {
   );
 }
 
-function Option(props: OptionProps<OptionType>) {
+const Option = (props: OptionProps<OptionType>) => {
   return (
     <MenuItem
       ref={props.innerRef}
@@ -94,11 +97,12 @@ function Option(props: OptionProps<OptionType>) {
       {props.children}
     </MenuItem>
   );
-}
+};
 
 type MuiPlaceholderProps = Omit<PlaceholderProps<OptionType>, 'innerProps'> &
   Partial<Pick<PlaceholderProps<OptionType>, 'innerProps'>>;
-function Placeholder(props: MuiPlaceholderProps) {
+
+const Placeholder = (props: MuiPlaceholderProps) =>{
   const { selectProps, innerProps = {}, children } = props;
   return (
     <Typography color="textSecondary" className={selectProps.classes.placeholder} {...innerProps}>
@@ -107,19 +111,19 @@ function Placeholder(props: MuiPlaceholderProps) {
   );
 }
 
-function SingleValue(props: SingleValueProps<OptionType>) {
+const SingleValue = (props: SingleValueProps<OptionType>) => {
   return (
     <Typography className={props.selectProps.classes.singleValue} {...props.innerProps}>
       {props.children}
     </Typography>
   );
-}
+};
 
-function ValueContainer(props: ValueContainerProps<OptionType>) {
+const ValueContainer = (props: ValueContainerProps<OptionType>) => {
   return <div className={props.selectProps.classes.valueContainer}>{props.children}</div>;
-}
+};
 
-function MultiValue(props: MultiValueProps<OptionType>) {
+const MultiValue = (props: MultiValueProps<OptionType>) => {
   return (
     <Chip
       tabIndex={-1}
@@ -131,15 +135,15 @@ function MultiValue(props: MultiValueProps<OptionType>) {
       deleteIcon={<CancelIcon {...props.removeProps} />}
     />
   );
-}
+};
 
-function Menu(props: MenuProps<OptionType>) {
+const Menu = (props: MenuProps<OptionType>) => {
   return (
     <Paper square className={props.selectProps.classes.paper} {...props.innerProps}>
       {props.children}
     </Paper>
   );
-}
+};
 
 const components = {
   Control,

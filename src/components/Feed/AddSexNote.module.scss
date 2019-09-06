@@ -1,5 +1,14 @@
 @import '../../assets/bindings';
 
+.root {
+  width: 100%;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: normal;
+}
+
 .container {
   display: flex;
   flex-direction: column;

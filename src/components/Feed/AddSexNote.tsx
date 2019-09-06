@@ -14,20 +14,38 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-    },
-    heading: {
-      fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular,
-    },
-  }),
-);
+const Safety = () => {
+  return (
+    <FormGroup row>
+      <FormControlLabel
+        value="start"
+        control={<Checkbox color="secondary" />}
+        label="Interrupted act"
+        labelPlacement="start"
+      />
+      <FormControlLabel
+        value="start"
+        control={<Checkbox color="secondary" />}
+        label="Condoms"
+        labelPlacement="start"
+      />
+      <FormControlLabel
+        value="Pills"
+        control={<Checkbox color="secondary" />}
+        label="Anal"
+        labelPlacement="start"
+      />
+      <FormControlLabel
+        value="start"
+        control={<Checkbox color="secondary" />}
+        label="Other"
+        labelPlacement="start"
+      />
+    </FormGroup>
+  )
+};
 
 const AddSexNote = () => {
-  const classes = useStyles();
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Add sex note</h1>
@@ -48,7 +66,7 @@ const AddSexNote = () => {
             }}
           />
           <Input
-            placeholder="Note (there you can write which poses have been used, inf about place or everything what you want to remember)"
+            placeholder="Note (poses, inf about place and etc)"
             defaultValue=""
             className={styles.input}
             inputProps={{
@@ -83,42 +101,17 @@ const AddSexNote = () => {
             />
           </FormGroup>
           <Tags/>
-          <div className={classes.root}>
+          <div className={styles.root}>
             <ExpansionPanel>
               <ExpansionPanelSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>Contraceptive methods</Typography>
+                <Typography className={styles.heading}>Contraceptive methods</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
-                <FormGroup row>
-                  <FormControlLabel
-                    value="start"
-                    control={<Checkbox color="secondary" />}
-                    label="Interrupted act"
-                    labelPlacement="start"
-                  />
-                  <FormControlLabel
-                    value="start"
-                    control={<Checkbox color="secondary" />}
-                    label="Condoms"
-                    labelPlacement="start"
-                  />
-                  <FormControlLabel
-                    value="Pills"
-                    control={<Checkbox color="secondary" />}
-                    label="Anal"
-                    labelPlacement="start"
-                  />
-                  <FormControlLabel
-                    value="start"
-                    control={<Checkbox color="secondary" />}
-                    label="Other"
-                    labelPlacement="start"
-                  />
-                </FormGroup>
+                Safety();
               </ExpansionPanelDetails>
             </ExpansionPanel>
           </div>
