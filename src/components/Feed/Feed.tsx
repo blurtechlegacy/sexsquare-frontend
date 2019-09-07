@@ -4,6 +4,7 @@ import AddSexNote from './AddSexNote'
 import styles from './Feed.module.scss'
 import moment from 'moment'
 import Map from '../Map/Map'
+import {ICoordinates} from '../Places'
 
 const mockData = [
   {
@@ -81,12 +82,25 @@ const dateFormat = (date: string) => moment(Number(date)).fromNow()
 const getRandomInt = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min)) + min
 
+export interface INote {
+  nickname: string
+  partners: string[]
+  timestamp: string
+  place: ICoordinates
+}
 const Feed = () => {
+  const [notes, setNotes] = React.useState<INote[] | undefined>(undefined)
+  React.useEffect(() => {
+    notes ? setNotes(notes) : setNotes(mockData)
+  }, [notes])
   return (
     <div className={styles.feedContainer}>
-      <AddSexNote/>
+      <AddSexNote add={(newNote: INote) => {
+        notes ? setNotes([...notes, newNote]) : setNotes([newNote])
+      }}/>
       <div className={styles.listContainer}>
-        {mockData.map(i => {
+        {notes &&
+        notes.sort((a: INote, b: INote) => +b.timestamp - +a.timestamp).map(i => {
           return (
             <div key={nanoid(8)} className={styles.sexNote}>
               <div className={styles.note}>
