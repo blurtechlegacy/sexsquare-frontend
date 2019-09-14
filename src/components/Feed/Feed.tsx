@@ -18,6 +18,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    types: ['Anal', 'oral'],
+    contraceptive: [' '],
+    notes: '',
+    private: true
   },
   {
     nickname: 'SrgGrch',
@@ -30,6 +34,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    types: ['anal', 'oral'],
+    contraceptive: ['Condoms'],
+    notes: '',
+    private: true
   },
   {
     nickname: 'Jane',
@@ -42,6 +50,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    types: ['anal'],
+    contraceptive: ['Condoms'],
+    notes: '',
+    private: true
   },
   {
     nickname: 'Bob',
@@ -54,6 +66,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    types: [''],
+    contraceptive: [''],
+    notes: '',
+    private: true
   },
   {
     nickname: 'John',
@@ -66,6 +82,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    types: ['vaginal', 'oral'],
+    contraceptive: ['Pills'],
+    notes: '',
+    private: true
   },
 ]
 
@@ -87,6 +107,11 @@ export interface INote {
   partners: string[]
   timestamp: string
   place: ICoordinates
+  private: boolean
+  types?: string[]
+  contraceptive?: string[]
+  tags?: string[]
+  notes?: string
 }
 const Feed = () => {
   const [notes, setNotes] = React.useState<INote[] | undefined>(undefined)

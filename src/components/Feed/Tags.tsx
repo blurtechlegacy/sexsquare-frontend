@@ -68,6 +68,7 @@ const Control = (props: ControlProps<OptionType>) =>
   return (
     <TextField
       fullWidth
+      className={styles.input}
       InputProps={{
         inputComponent,
         inputProps: {
@@ -155,11 +156,17 @@ const components = {
   ValueContainer,
 };
 
-export default function IntegrationReactSelect() {
+interface IProps {
+  onChange: (arg0: any) => void
+}
+
+const Tags = (props : IProps) => {
+  const { onChange } = props
   const [multi, setMulti] = React.useState<ValueType<OptionType>>(null);
 
   function handleChangeMulti(value: ValueType<OptionType>) {
     setMulti(value);
+    onChange(multi)
   }
 
   const selectStyles = {
@@ -198,3 +205,4 @@ export default function IntegrationReactSelect() {
     </div>
   );
 }
+export default Tags
