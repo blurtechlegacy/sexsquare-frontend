@@ -18,7 +18,6 @@ import { SingleValueProps } from 'react-select/src/components/SingleValue';
 import { ValueType } from 'react-select/src/types';
 import { Omit } from '@material-ui/types';
 import styles from './Tags.module.scss'
-import { black } from 'material-ui/styles/colors'
 
 interface OptionType {
   label: string;
@@ -157,12 +156,7 @@ const components = {
 };
 
 export default function IntegrationReactSelect() {
-  const [single, setSingle] = React.useState<ValueType<OptionType>>(null);
   const [multi, setMulti] = React.useState<ValueType<OptionType>>(null);
-
-  function handleChangeSingle(value: ValueType<OptionType>) {
-    setSingle(value);
-  }
 
   function handleChangeMulti(value: ValueType<OptionType>) {
     setMulti(value);
