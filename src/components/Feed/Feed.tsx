@@ -18,6 +18,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    sexTypes: ['Anal', 'oral'],
+    contraceptiveMethods: [' '],
+    notes: [' '],
+    privateFlag: true
   },
   {
     nickname: 'SrgGrch',
@@ -30,6 +34,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    sexTypes: ['Anal', 'oral'],
+    contraceptiveMethods: ['Condoms'],
+    notes: [' '],
+    privateFlag: true
   },
   {
     nickname: 'Jane',
@@ -42,6 +50,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    sexTypes: ['Anal'],
+    contraceptiveMethods: ['Condoms'],
+    notes: [' '],
+    privateFlag: true
   },
   {
     nickname: 'Bob',
@@ -54,6 +66,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    sexTypes: [''],
+    contraceptiveMethods: [''],
+    notes: [' '],
+    privateFlag: true
   },
   {
     nickname: 'John',
@@ -66,6 +82,10 @@ const mockData = [
       },
       zoom: 14,
     },
+    sexTypes: ['Vaginal', 'oral'],
+    contraceptiveMethods: ['Pills'],
+    notes: [' '],
+    privateFlag: true
   },
 ]
 
