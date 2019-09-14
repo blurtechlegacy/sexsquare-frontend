@@ -11,10 +11,17 @@ export interface ICoordinates {
   zoom: number
 }
 
-const Places: React.FC = (props: GeolocatedProps | any) => {
+interface IProps {
+  manyPoints: ICoordinates[]
+}
+
+const Places: React.FC = (props: GeolocatedProps | IProps | any) => {
+  const { propsManyPoints } = props
   const [currentCoords, setCurrentCoords] = React.useState<
     ICoordinates | undefined
   >(undefined)
+  const [manyPoints, setManyPoints] = React.useState<ICoordinates[]>([])
+  React.useEffect(() => setManyPoints(propsManyPoints), [propsManyPoints])
   React.useEffect(() => {
     setCurrentCoords({
       center: {
@@ -35,6 +42,7 @@ const Places: React.FC = (props: GeolocatedProps | any) => {
       <Map
         coordinates={currentCoords}
         points={currentCoords && Array.of(currentCoords.center)}
+        manyPoints={manyPoints}
       />
       : (<div>Getting the location data&hellip; </div>
       );

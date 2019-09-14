@@ -4,7 +4,7 @@ import AddSexNote from './AddSexNote'
 import styles from './Feed.module.scss'
 import moment from 'moment'
 import Map from '../Map/Map'
-import {ICoordinates} from '../Places'
+import { ICoordinates } from '../Places'
 
 const mockData = [
   {
@@ -25,7 +25,7 @@ const mockData = [
     timestamp: '1567340306874',
     place: {
       center: {
-        lat: 54.986660,
+        lat: 54.98666,
         lng: 82.916079,
       },
       zoom: 14,
@@ -95,36 +95,53 @@ const Feed = () => {
   }, [notes])
   return (
     <div className={styles.feedContainer}>
-      <AddSexNote add={(newNote: INote) => {
-        notes ? setNotes([...notes, newNote]) : setNotes([newNote])
-      }}/>
+      <AddSexNote
+        add={(newNote: INote) => {
+          notes ? setNotes([...notes, newNote]) : setNotes([newNote])
+        }}
+      />
       <div className={styles.listContainer}>
         {notes &&
-        notes.sort((a: INote, b: INote) => +b.timestamp - +a.timestamp).map(i => {
-          return (
-            <div key={nanoid(8)} className={styles.sexNote}>
-              <div className={styles.note}>
-                <div className={styles.message}>
-                  {i.nickname}{' '}
-                  {i.partners.length > 0
-                    ? `${
-                      punches[getRandomInt(0, punches.length)]
-                    } ${i.partners.map(
-                      (item, index) => (index ? ' ' : '') + item,
-                    )}`
-                    : punchesHand[getRandomInt(0, punches.length)]}
+          notes
+            .sort((a: INote, b: INote) => +b.timestamp - +a.timestamp)
+            .map(i => {
+              return (
+                <div key={nanoid(8)} className={styles.sexNote}>
+                  <div className={styles.note}>
+                    <div className={styles.message}>
+                      {i.nickname}{' '}
+                      {i.partners.length > 0
+                        ? `${
+                            punches[getRandomInt(0, punches.length)]
+                          } ${i.partners.map(
+                            (item, index) => (index ? ' ' : '') + item
+                          )}`
+                        : punchesHand[getRandomInt(0, punches.length)]}
+                    </div>
+                    <div className={styles.timestamp}>
+                      {dateFormat(i.timestamp)}
+                    </div>
+                  </div>
+                  <div className={styles.map}>
+                    {i.place && (
+                      <Map
+                        points={[
+                          { lat: i.place.center.lat, lng: i.place.center.lng },
+                        ]}
+                        size={{ height: '100px', width: '100%' }}
+                        coordinates={{
+                          center: {
+                            lat: i.place.center.lat,
+                            lng: i.place.center.lng,
+                          },
+                          zoom: i.place.zoom,
+                        }}
+                      />
+                    )}
+                  </div>
                 </div>
-                <div className={styles.timestamp}>
-                  {dateFormat(i.timestamp)}
-                </div>
-              </div>
-              <div className={styles.map}>
-                {i.place && <Map points={[{ lat: i.place.center.lat, lng: i.place.center.lng }]} size={{ height: '100px', width: '100%' }}
-                                 coordinates={{ center: { lat: i.place.center.lat, lng: i.place.center.lng }, zoom: i.place.zoom }}/>}
-              </div>
-            </div>
-          )
-        })}
+              )
+            })}
       </div>
     </div>
   )

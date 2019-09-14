@@ -25,13 +25,14 @@ interface IProps {
   points?: IPoints[]
   coordinates?: ICoordinates
   size?: ISizeProps
+  manyPoints?: ICoordinates[]
 }
 
 const Point = (props: any) => <Icon icon={mapMarker} width={40} height={40} />
 
 const Map = (props: IProps) => {
   let { size } = props
-  const { coordinates, points } = props
+  const { coordinates, points, manyPoints } = props
   if (!size) {
     size = {
       height: '100vh',
@@ -52,8 +53,9 @@ const Map = (props: IProps) => {
           }}
           defaultCenter={coordinates.center}
           defaultZoom={coordinates.zoom}
+          yesIWantToUseGoogleMapApiInternals
         >
-          {points &&
+          {manyPoints ? manyPoints.map(item => <Point lat={item.center.lat} lng={item.center.lng} />): points &&
             points.map(item => <Point lat={item.lat} lng={item.lng} />)}
         </GoogleMapReact>
       )}
