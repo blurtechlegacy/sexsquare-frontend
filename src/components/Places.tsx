@@ -3,7 +3,7 @@ import Header from './Header/Header'
 import Map from './Map/Map'
 import { GeolocatedProps, geolocated } from 'react-geolocated'
 
-interface ICoordinates {
+export interface ICoordinates {
   center: {
     lat: number
     lng: number

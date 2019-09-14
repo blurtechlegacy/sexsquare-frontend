@@ -12,6 +12,13 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { INote } from './Feed'
+import moment from 'moment'
+
+
+interface IProps {
+  add: (item: INote) => void
+}
 
 const safety = () => {
   return (
@@ -44,7 +51,10 @@ const safety = () => {
   )
 };
 
-const AddSexNote = () => {
+const AddSexNote = ({add}:IProps) => {
+  const [note, setNote] = React.useState<INote| undefined>(undefined)
+  const [partners, setPartners] = React.useState<string>('')
+  React.useEffect(()=>{note && add((note))}, [note])
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Add sex note</h1>
@@ -63,6 +73,7 @@ const AddSexNote = () => {
             inputProps={{
               'aria-label': 'description',
             }}
+            onChange={item => setPartners(item.target.value)}
           />
           <Input
             placeholder="Note (poses, inf about place and etc)"
@@ -121,7 +132,16 @@ const AddSexNote = () => {
                   label="Private"
                   labelPlacement="start"
                 />
-            <Button variant="contained" color="primary" className={styles.button}>
+            <Button variant="contained" color="primary" className={styles.button}
+                    onClick={()=>{ setNote({partners: partners.split(','), nickname:'MacOSO', timestamp: String(moment().unix()*1000),
+                      place: {
+                        center: {
+                          lat: 54.986932,
+                          lng: 82.925015,
+                        },
+                        zoom: 14,
+                      } })}}
+            >
                 Send
                 <Icon className={styles.rightIcon}>send</Icon>
             </Button>
