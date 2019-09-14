@@ -54,7 +54,7 @@ const safety = () => {
 const AddSexNote = ({add}:IProps) => {
   const [note, setNote] = React.useState<INote| undefined>(undefined)
   const [partners, setPartners] = React.useState<string>('')
-  React.useEffect(()=>{note && add((note))}, [note])
+  React.useEffect(()=>{note && add((note))}, [note, add])
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Add sex note</h1>
