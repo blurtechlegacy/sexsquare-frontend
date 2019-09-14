@@ -18,10 +18,10 @@ const mockData = [
       },
       zoom: 14,
     },
-    sexTypes: ['Anal', 'oral'],
-    contraceptiveMethods: [' '],
-    notes: [' '],
-    privateFlag: true
+    types: ['Anal', 'oral'],
+    contraceptive: [' '],
+    notes: '',
+    private: true
   },
   {
     nickname: 'SrgGrch',
@@ -34,10 +34,10 @@ const mockData = [
       },
       zoom: 14,
     },
-    sexTypes: ['Anal', 'oral'],
-    contraceptiveMethods: ['Condoms'],
-    notes: [' '],
-    privateFlag: true
+    types: ['anal', 'oral'],
+    contraceptive: ['Condoms'],
+    notes: '',
+    private: true
   },
   {
     nickname: 'Jane',
@@ -50,10 +50,10 @@ const mockData = [
       },
       zoom: 14,
     },
-    sexTypes: ['Anal'],
-    contraceptiveMethods: ['Condoms'],
-    notes: [' '],
-    privateFlag: true
+    types: ['anal'],
+    contraceptive: ['Condoms'],
+    notes: '',
+    private: true
   },
   {
     nickname: 'Bob',
@@ -66,10 +66,10 @@ const mockData = [
       },
       zoom: 14,
     },
-    sexTypes: [''],
-    contraceptiveMethods: [''],
-    notes: [' '],
-    privateFlag: true
+    types: [''],
+    contraceptive: [''],
+    notes: '',
+    private: true
   },
   {
     nickname: 'John',
@@ -82,10 +82,10 @@ const mockData = [
       },
       zoom: 14,
     },
-    sexTypes: ['Vaginal', 'oral'],
-    contraceptiveMethods: ['Pills'],
-    notes: [' '],
-    privateFlag: true
+    types: ['vaginal', 'oral'],
+    contraceptive: ['Pills'],
+    notes: '',
+    private: true
   },
 ]
 
@@ -107,6 +107,11 @@ export interface INote {
   partners: string[]
   timestamp: string
   place: ICoordinates
+  private: boolean
+  types?: string[]
+  contraceptive?: string[]
+  tags?: string[]
+  notes?: string
 }
 const Feed = () => {
   const [notes, setNotes] = React.useState<INote[] | undefined>(undefined)

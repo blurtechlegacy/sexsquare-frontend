@@ -7,7 +7,6 @@ import Icon from '@material-ui/core/Icon';
 import styles from './AddSexNote.module.scss'
 import FormGroup from '@material-ui/core/FormGroup';
 import Tags from './Tags';
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -15,8 +14,6 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { INote } from './Feed'
 import moment from 'moment'
-import Select from 'react-select'
-
 
 interface IProps {
   add: (item: INote) => void
@@ -58,13 +55,12 @@ const AddSexNote = ({add}:IProps) => {
   const [sexNote, setSexNote] = React.useState<string | undefined>(undefined)
   const [place, setPlace] = React.useState<string | undefined>(undefined)
   const [partners, setPartners] = React.useState<string>('')
-  const [types, setTypes] = React.useState<object>([])
-  const [tags, setTags] = React.useState<object | undefined>(undefined)
-  const [contraceptive, setContraceptive] = React.useState<object>([])
+  const [types, setTypes] = React.useState<string[]>([])
+  const [tags, setTags] = React.useState<string[] | undefined>(undefined)
+  const [contraceptive, setContraceptive] = React.useState<string[]>([])
   const [privateFlag, setPrivateFlag] = React.useState<boolean>(false)
-  React.useEffect(()=>{note && add((note))}, [note])
-    // @ts-ignore
-  return (
+  React.useEffect(()=>{note && add((note))}, [note, add])
+    return (
         <div className={styles.container}>
             <Input
                 placeholder="Where have you had sex?"
@@ -146,14 +142,23 @@ const AddSexNote = ({add}:IProps) => {
                   labelPlacement="start"
                 />
             <Button variant="contained" color="primary" className={styles.button}
-                    onClick={()=>{ setNote({partners: partners.split(','), nickname:'MacOSO', timestamp: String(moment().unix()*1000),
+                    onClick={()=>{ setNote({
+                      partners: partners.split(','),
+                      nickname:'MacOSO',
+                      timestamp: String(moment().unix()*1000),
                       place: {
                         center: {
                           lat: 54.986932,
                           lng: 82.925015,
                         },
                         zoom: 14,
-                      } })}}
+                      },
+                      private: privateFlag,
+                      notes: sexNote,
+                    contraceptive: contraceptive,
+                    types: types,
+                    tags: tags})}
+                      }
             >
                 Send
                 <Icon className={styles.rightIcon}>send</Icon>
