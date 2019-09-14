@@ -1,5 +1,14 @@
 @import '../../assets/bindings';
 
+.root {
+  width: 100%;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: normal;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -12,12 +21,13 @@
 }
 
 .buttons {
+  margin: $default-spacer;
   display: flex;
   justify-content: space-between;
 }
 
 .rightIcon {
-  margin-left: $default-spacer;
+  margin: $default-spacer;
 }
 
 .title {
