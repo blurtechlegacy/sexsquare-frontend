@@ -21,7 +21,7 @@ const mockData = [
     types: ['Anal', 'oral'],
     contraceptive: [' '],
     notes: '',
-    private: true
+    private: true,
   },
   {
     nickname: 'SrgGrch',
@@ -37,7 +37,7 @@ const mockData = [
     types: ['anal', 'oral'],
     contraceptive: ['Condoms'],
     notes: '',
-    private: true
+    private: true,
   },
   {
     nickname: 'Jane',
@@ -53,7 +53,7 @@ const mockData = [
     types: ['anal'],
     contraceptive: ['Condoms'],
     notes: '',
-    private: true
+    private: true,
   },
   {
     nickname: 'Bob',
@@ -69,7 +69,7 @@ const mockData = [
     types: [''],
     contraceptive: [''],
     notes: '',
-    private: true
+    private: true,
   },
   {
     nickname: 'John',
@@ -85,7 +85,7 @@ const mockData = [
     types: ['vaginal', 'oral'],
     contraceptive: ['Pills'],
     notes: '',
-    private: true
+    private: true,
   },
 ]
 

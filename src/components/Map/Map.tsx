@@ -1,7 +1,7 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
-import { Icon } from '@iconify/react';
-import mapMarker from '@iconify/icons-mdi/map-marker';
+import { Icon } from '@iconify/react'
+import mapMarker from '@iconify/icons-mdi/map-marker'
 
 interface ISizeProps {
   height: string
@@ -55,8 +55,12 @@ const Map = (props: IProps) => {
           defaultZoom={coordinates.zoom}
           yesIWantToUseGoogleMapApiInternals
         >
-          {manyPoints ? manyPoints.map(item => <Point lat={item.center.lat} lng={item.center.lng} />): points &&
-            points.map(item => <Point lat={item.lat} lng={item.lng} />)}
+          {manyPoints
+            ? manyPoints.map(item => (
+                <Point lat={item.center.lat} lng={item.center.lng} />
+              ))
+            : points &&
+              points.map(item => <Point lat={item.lat} lng={item.lng} />)}
         </GoogleMapReact>
       )}
     </div>
