@@ -1,7 +1,7 @@
 import React from 'react'
 import nanoid from 'nanoid'
 import AddSexNote from './AddSexNote'
-import styles from './Feed.module.scss'
+import styles from './FeedList.module.scss'
 import moment from 'moment'
 import Map from '../Map/Map'
 import { ICoordinates } from '../Places'
@@ -113,7 +113,7 @@ export interface INote {
   tags?: string[]
   notes?: string
 }
-const Feed = () => {
+const FeedList = () => {
   const [notes, setNotes] = React.useState<INote[] | undefined>(undefined)
   React.useEffect(() => {
     notes ? setNotes(notes) : setNotes(mockData)
@@ -172,4 +172,4 @@ const Feed = () => {
   )
 }
 
-export default Feed
+export default FeedList
