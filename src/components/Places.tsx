@@ -2,14 +2,7 @@ import React from 'react'
 import Header from './Header/Header'
 import Map from './Map/Map'
 import { GeolocatedProps, geolocated } from 'react-geolocated'
-
-export interface ICoordinates {
-  center: {
-    lat: number
-    lng: number
-  }
-  zoom: number
-}
+import { ICoordinates } from './models/IMap'
 
 interface IProps {
   manyPoints: ICoordinates[]

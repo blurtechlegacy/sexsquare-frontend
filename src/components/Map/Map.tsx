@@ -2,27 +2,15 @@ import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import { Icon } from '@iconify/react'
 import mapMarker from '@iconify/icons-mdi/map-marker'
+import { ICoordinates, IPoint } from '../models/IMap'
 
 interface ISizeProps {
   height: string
   width: string
 }
 
-interface IPoints {
-  lat: number
-  lng: number
-}
-
-interface ICoordinates {
-  center: {
-    lat: number
-    lng: number
-  }
-  zoom: number
-}
-
 interface IProps {
-  points?: IPoints[]
+  points?: IPoint[]
   coordinates?: ICoordinates
   size?: ISizeProps
   manyPoints?: ICoordinates[]
