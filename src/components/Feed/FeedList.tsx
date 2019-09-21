@@ -4,7 +4,7 @@ import AddSexNote from './AddSexNote'
 import styles from './FeedList.module.scss'
 import moment from 'moment'
 import Map from '../Map/Map'
-import { ICoordinates } from '../Places'
+import { INote } from '../models/IFeed'
 
 const mockData = [
   {
@@ -102,17 +102,6 @@ const dateFormat = (date: string) => moment(Number(date)).fromNow()
 const getRandomInt = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min)) + min
 
-export interface INote {
-  nickname: string
-  partners: string[]
-  timestamp: string
-  place: ICoordinates
-  private: boolean
-  types?: string[]
-  contraceptive?: string[]
-  tags?: string[]
-  notes?: string
-}
 const FeedList = () => {
   const [notes, setNotes] = React.useState<INote[] | undefined>(undefined)
   React.useEffect(() => {

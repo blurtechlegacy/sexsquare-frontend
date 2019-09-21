@@ -1,7 +1,15 @@
 import React from 'react'
+import styles from './About.module.scss'
+import AboutGrid from './About/AboutGrid'
 
-const About = () => {
-  return <div>About</div>
+const AboutList = () => {
+  return (
+    <div className={styles.root}>
+      <div className={styles.aboutContainer}>
+        <AboutGrid />
+      </div>
+    </div>
+  )
 }
 
-export default About
+export default AboutList

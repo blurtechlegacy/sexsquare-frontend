@@ -1,0 +1,11 @@
+@import '../../assets/bindings';
+
+.card {
+  margin-inline-end: $default-spacer;
+  margin-bottom: $default-spacer;
+  width: 200px;
+}
+
+.cardContent {
+  max-height: 150px;
+}
