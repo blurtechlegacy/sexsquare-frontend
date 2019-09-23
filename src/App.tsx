@@ -7,7 +7,6 @@ import Profile from './components/Profile'
 import Places from './components/Places'
 import About from './components/About'
 import nanoid from 'nanoid'
-import { getState } from './store'
 
 const routes = [
   {
