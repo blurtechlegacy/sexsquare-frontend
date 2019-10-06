@@ -7,7 +7,7 @@ const ProfileMain = () =>
     <div className={styles.profileContainer}>
       <div className={styles.photo}>
       </div>
-      <div className={styles.info}
+      <div className={styles.info}>
       </div>
     </div>
   )

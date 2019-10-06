@@ -18,7 +18,7 @@ const mockData = [
       },
       zoom: 14,
     },
-    types: ['Anal', 'oral'],
+    types: ['anal', 'oral'],
     contraceptive: [' '],
     notes: '',
     private: true,
