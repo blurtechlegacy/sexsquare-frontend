@@ -1,0 +1,23 @@
+@import '../../assets/bindings';
+
+.profileContainer {
+  width: 66.66%;
+  display: flex;
+  float: right;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+.photo {
+  display: flex;
+  width: 33.33%;
+  float: left;
+  margin: 5px;
+}
+
+.info {
+  display: flex;
+  width: 33.33%;
+  float: left;
+  margin: 5px;
+ }
