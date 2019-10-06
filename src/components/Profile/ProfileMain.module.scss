@@ -1,7 +1,7 @@
 @import '../../assets/bindings';
 
 .profileContainer {
-  width: 66.66%;
+  width: 100%;
   display: flex;
   float: right;
   flex-direction: row;
@@ -10,14 +10,15 @@
 
 .photo {
   display: flex;
-  width: 33.33%;
-  float: left;
-  margin: 5px;
+  width: 25%;
+  margin: $default-spacer*2;
+  text-align: center;
 }
 
 .info {
   display: flex;
-  width: 33.33%;
-  float: left;
-  margin: 5px;
+  width: 75%;
+  text-align: left;
+  flex-direction: column;
+  margin: $default-spacer;
  }

@@ -1,0 +1,16 @@
+@import '../../assets/bindings';
+
+.card {
+  margin-inline-end: $default-spacer;
+  margin-bottom: $default-spacer;
+  width: 200px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.cardContent {
+  max-height: 200px;
+}

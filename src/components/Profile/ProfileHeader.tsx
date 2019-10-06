@@ -12,8 +12,7 @@ const ProfileHeader = (props: IProps) => {
 
   return (
     <div className={styles.profileHeader}>
-      <Gravatar md5={String(md5(profile.email))} default="wavatar" />
-      <h2>{profile.nickname}</h2>
+      <Gravatar md5={String(md5(profile.email))} default="wavatar" className={styles.avatar}/>
     </div>
   )
 }

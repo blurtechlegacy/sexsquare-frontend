@@ -1,12 +1,10 @@
 @import '../assets/bindings';
 
-.profileRoot {
-}
-
 root {
   text-align: center;
 }
-.profileContainer
-{
+
+.profileContainer {
   display: flex;
+  flex-direction: column;
 }
