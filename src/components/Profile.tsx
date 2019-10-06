@@ -1,5 +1,8 @@
 import React from 'react'
-import ProfileHeader from './Profile/ProfileHeader'
+import ProfileMainInfo from './Profile/ProfileMain'
+import RecentInfo from './Profile/RecentInfo'
+import Friends from './Profile/Friends'
+import Achievements from './Profile/Achievements'
 import styles from './Profile.module.scss'
 
 const profile = {
@@ -77,13 +80,28 @@ const profile = {
       nickname: 'SrgGrch',
       email: 'srg.grch@gmail.com',
     },
+    {
+      nickname: 'AlexBulatov',
+      email: ' ',
+    },
+    {
+      nickname: 'tnnNull',
+      email: ' ',
+    }
   ],
 }
 
+export type IProfile = typeof profile
+
 const Profile = () => {
   return (
-    <div className={styles.profileRoot}>
-      <ProfileHeader profile={profile} />
+    <div className={styles.root}>
+      <div className={styles.profileContainer}>
+        <ProfileMainInfo profile={profile} />
+        <Achievements profile={profile}/>
+        <Friends profile={profile}/>
+        <RecentInfo profile={profile}/>
+      </div>
     </div>
   )
 }
