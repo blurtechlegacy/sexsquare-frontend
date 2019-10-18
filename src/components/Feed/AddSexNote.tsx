@@ -159,7 +159,7 @@ const AddSexNote = ({ add }: IProps) => {
               labelPlacement="start"
             />
           </FormGroup>
-          <Tags onChange={(item: any) => setTags(item)} />
+          <Tags onChange={setTags} />
           <div className={styles.root}>
             <ExpansionPanel>
               <ExpansionPanelSummary
