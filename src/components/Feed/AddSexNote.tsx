@@ -19,37 +19,6 @@ interface IProps {
   add: (item: INote) => void
 }
 
-const safety = () => {
-  return (
-    <FormGroup row>
-      <FormControlLabel
-        value="start"
-        control={<Checkbox color="secondary" />}
-        label="Interrupted act"
-        labelPlacement="start"
-      />
-      <FormControlLabel
-        value="start"
-        control={<Checkbox color="secondary" />}
-        label="Condoms"
-        labelPlacement="start"
-      />
-      <FormControlLabel
-        value="Pills"
-        control={<Checkbox color="secondary" />}
-        label="Anal"
-        labelPlacement="start"
-      />
-      <FormControlLabel
-        value="start"
-        control={<Checkbox color="secondary" />}
-        label="Other"
-        labelPlacement="start"
-      />
-    </FormGroup>
-  )
-}
-
 const AddSexNote = ({ add }: IProps) => {
   const [note, setNote] = React.useState<INote | undefined>(undefined)
   const [sexNote, setSexNote] = React.useState<string | undefined>(undefined)
@@ -62,6 +31,60 @@ const AddSexNote = ({ add }: IProps) => {
   React.useEffect(() => {
     note && add(note)
   }, [note, add])
+
+  function removeType(value: string) {
+    types.splice(types.indexOf(value),1);
+    setTypes([...types])
+  }
+
+  function removeContraceptive(value: string) {
+    contraceptive.splice(contraceptive.indexOf(value),1);
+    setContraceptive([...contraceptive])
+  }
+
+  const safety = () => {
+    return (
+      <FormGroup row>
+        <FormControlLabel
+          value="interrupted act"
+          control={<Checkbox
+            onChange={item => {
+              return item.target.checked ? setContraceptive([...contraceptive, item.target.value]) : removeContraceptive(item.target.value)}}
+            color="secondary"  />}
+          label="Interrupted act"
+          labelPlacement="start"
+        />
+        <FormControlLabel
+          value="condoms"
+          control={<Checkbox
+            onChange={item => {
+              return item.target.checked ? setContraceptive([...contraceptive, item.target.value]) : removeContraceptive(item.target.value)}}
+            color="secondary" />}
+          label="Condoms"
+          labelPlacement="start"
+        />
+        <FormControlLabel
+          value="anal"
+          control={<Checkbox
+            onChange={item => {
+              return item.target.checked ? setContraceptive([...contraceptive, item.target.value]) : removeContraceptive(item.target.value)}}
+            color="secondary" />}
+          label="Anal"
+          labelPlacement="start"
+        />
+        <FormControlLabel
+          value="other"
+          control={<Checkbox
+            onChange={item => {
+              return item.target.checked ? setContraceptive([...contraceptive, item.target.value]) : removeContraceptive(item.target.value)}}
+            color="secondary" />}
+          label="Other"
+          labelPlacement="start"
+        />
+      </FormGroup>
+    )
+  }
+
   return (
     <div className={styles.container}>
       <Input
@@ -99,25 +122,39 @@ const AddSexNote = ({ add }: IProps) => {
             <h4>Mark the types of your sex:</h4>
             <FormControlLabel
               value="vaginal"
-              control={<Checkbox color="secondary" />}
+              control={<Checkbox
+                onChange={item => {
+                  return item.target.checked ? setTypes([...types, item.target.value]) : removeType(item.target.value)
+                }
+                }
+                color="secondary" />}
               label="Vaginal"
               labelPlacement="start"
             />
             <FormControlLabel
               value="oral"
-              control={<Checkbox color="secondary" />}
+              control={<Checkbox
+                onChange={item =>
+                  item.target.checked? setTypes([...types, item.target.value]) : removeType(item.target.value)}
+                color="secondary" />}
               label="Oral"
               labelPlacement="start"
             />
             <FormControlLabel
               value="anal"
-              control={<Checkbox color="secondary" />}
+              control={<Checkbox
+                onChange={item =>
+                  item.target.checked? setTypes([...types, item.target.value]) : removeType(item.target.value)}
+                color="secondary" />}
               label="Anal"
               labelPlacement="start"
             />
             <FormControlLabel
               value="petting"
-              control={<Checkbox color="secondary" />}
+              control={<Checkbox
+                onChange={item =>
+                  item.target.checked? setTypes([...types, item.target.value]) : removeType(item.target.value)}
+                color="secondary" />}
               label="Petting"
               labelPlacement="start"
             />
