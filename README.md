@@ -22,7 +22,8 @@ Before starting work on the project, it is recommended that you familiarize your
 * :feelsgood: **Alexandr Sidorenko** - *Team Lead front-end developer* - [MacOSO](https://github.com/MacOSO)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/batyshkaLenin.svg?style=social&label=Follow)](https://twitter.com/batyshkaLenin)  
 * :shipit: **Vitaly Shatalov** - *Front-end developer* - [tnnNull](https://github.com/tnnNull)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/thevetka.svg?style=social&label=Follow)](https://twitter.com/thevetka)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/thevetka.svg?style=social&label=Follow)](https://twitter.com/thevetka)
+* :penguin: **Danil Tankov** - *Front-end developer* - [evist0](https://github.com/evist0)
 
 See also the list of [contributors](https://github.com/blurtech/sexsquare-frontend/contributors) who participated in this project.
 
