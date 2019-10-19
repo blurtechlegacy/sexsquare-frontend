@@ -32,12 +32,12 @@ const AddSexNote = ({ add }: IProps) => {
     note && add(note)
   }, [note, add])
 
-  function removeType(value: string) {
+  const removeType = (value: string) => {
     types.splice(types.indexOf(value),1);
     setTypes([...types])
   }
 
-  function removeContraceptive(value: string) {
+  const removeContraceptive = (value: string) => {
     contraceptive.splice(contraceptive.indexOf(value),1);
     setContraceptive([...contraceptive])
   }
@@ -83,6 +83,11 @@ const AddSexNote = ({ add }: IProps) => {
         />
       </FormGroup>
     )
+  }
+
+  const tagSelector = (items: any) => {
+      const tags = items ? items.map((item: any) => item.value) : []
+      setTags(tags)
   }
 
   return (
@@ -159,7 +164,7 @@ const AddSexNote = ({ add }: IProps) => {
               labelPlacement="start"
             />
           </FormGroup>
-          <Tags onChange={setTags} />
+          <Tags onChange={tagSelector} />
           <div className={styles.root}>
             <ExpansionPanel>
               <ExpansionPanelSummary
@@ -193,6 +198,23 @@ const AddSexNote = ({ add }: IProps) => {
           color="primary"
           className={styles.button}
           onClick={() => {
+              console.log({
+                  partners: partners.split(','),
+                  nickname: 'MacOSO',
+                  timestamp: String(moment().unix() * 1000),
+                  place: {
+                      center: {
+                          lat: 54.986932,
+                          lng: 82.925015,
+                      },
+                      zoom: 14,
+                  },
+                  private: privateFlag,
+                  notes: sexNote,
+                  contraceptive: contraceptive,
+                  types: types,
+                  tags: tags,
+              })
             setNote({
               partners: partners.split(','),
               nickname: 'MacOSO',
