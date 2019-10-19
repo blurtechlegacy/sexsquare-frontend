@@ -170,16 +170,15 @@ const components = {
 }
 
 interface IProps {
-  onChange: (arg0: any) => void
+  onChange: (item: any) => void
 }
 
 const Tags = (props: IProps) => {
-  const { onChange } = props
   const [multi, setMulti] = React.useState<ValueType<OptionType>>(null)
 
   const handleChangeMulti = (value: ValueType<OptionType>) => {
-    setMulti(value)
-    onChange(multi)
+    setMulti(value);
+    props.onChange(value);
   }
 
   const selectStyles = {
