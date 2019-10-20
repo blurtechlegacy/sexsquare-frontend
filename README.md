@@ -9,7 +9,8 @@ Check-in your sex on the world map and count it all...
 Before starting work on the project, it is recommended that you familiarize yourself with the document [CONTRIBUTION.md](CONTRIBUTION.md)
 
 `yarn install` - install dependencies.  
-`npm start` - runs the app in the development mode.  
+`npm start` - runs the app in the production mode.  
+`npm run dev` - runs the app in the development mode.  
 `npm run build` - builds the app for production to the build folder.  
 `npm run test` - launches the test runner in the interactive watch mode.  
 `npm run eject` - this command will remove the single build dependency from your project.  
@@ -21,7 +22,9 @@ Before starting work on the project, it is recommended that you familiarize your
 * :feelsgood: **Alexandr Sidorenko** - *Team Lead front-end developer* - [MacOSO](https://github.com/MacOSO)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/batyshkaLenin.svg?style=social&label=Follow)](https://twitter.com/batyshkaLenin)  
 * :shipit: **Vitaly Shatalov** - *Front-end developer* - [tnnNull](https://github.com/tnnNull)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/thevetka.svg?style=social&label=Follow)](https://twitter.com/thevetka)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/thevetka.svg?style=social&label=Follow)](https://twitter.com/thevetka)
+* :penguin: **Danil Tankov** - *Front-end developer* - [evist0](https://github.com/evist0)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/danushaperdusha.svg?style=social&label=Follow)](https://twitter.com/danushaperdusha)
 
 See also the list of [contributors](https://github.com/blurtech/sexsquare-frontend/contributors) who participated in this project.
 
