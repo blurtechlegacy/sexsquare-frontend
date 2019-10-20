@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import moment from 'moment'
 import { INote } from '../models/IFeed'
+import {ISexNote} from "../../classes/models/ISexNote";
 
 interface IProps {
   add: (item: INote) => void
@@ -51,7 +52,7 @@ const safety = () => {
 }
 
 const AddSexNote = ({ add }: IProps) => {
-  const [note, setNote] = React.useState<INote | undefined>(undefined)
+  const [note, setNote] = React.useState<ISexNote | undefined>(undefined)
   const [sexNote, setSexNote] = React.useState<string | undefined>(undefined)
   const [place, setPlace] = React.useState<string | undefined>(undefined)
   const [partners, setPartners] = React.useState<string>('')

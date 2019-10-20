@@ -1,9 +1,13 @@
-export const initialState = {
-    isAuth: 'false'
-}
+import {ISexNote} from "../classes/models/ISexNote";
 
-export type IState = typeof initialState
+export const initialState = {
+    feed: [],
+};
+
+export interface IState {
+    feed: ISexNote[]
+}
 
 export interface IAppState {
     app: IState
-  }
+}
