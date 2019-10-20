@@ -5,6 +5,7 @@ import styles from './FeedList.module.scss'
 import moment from 'moment'
 import Map from '../Map/Map'
 import { INote } from '../models/IFeed'
+import { scryRenderedDOMComponentsWithTag } from 'react-dom/test-utils'
 
 const mockData = [
   {
@@ -19,7 +20,6 @@ const mockData = [
       zoom: 14,
     },
     types: ['anal', 'oral'],
-    contraceptive: [' '],
     notes: '',
     private: true,
   },
@@ -34,8 +34,9 @@ const mockData = [
       },
       zoom: 14,
     },
+    tags: ['BDSM', 'Sex with toys'],
     types: ['anal', 'oral'],
-    contraceptive: ['Condoms'],
+    contraceptive: ['Condoms', 'Pills'],
     notes: '',
     private: true,
   },
@@ -66,8 +67,8 @@ const mockData = [
       },
       zoom: 14,
     },
-    types: [''],
-    contraceptive: [''],
+    contraceptive: ['Pills'],
+    tags: ['Gay sex', 'Swing'],
     notes: '',
     private: true,
   },
@@ -82,20 +83,24 @@ const mockData = [
       },
       zoom: 14,
     },
-    types: ['vaginal', 'oral'],
-    contraceptive: ['Pills'],
     notes: '',
     private: true,
   },
 ]
 
 const punches = [
-  'knocked n-times into',
-  'had sex with',
-  'investigated some holes of',
+  'knocked n-times into ',
+  'had sex with ',
+  'investigated some holes of ',
 ]
 
-const punchesHand = ['free yourself', 'beated the meat out']
+const punchesHand = ['free yourself ', 'beated the meat out ']
+
+const withCon = ['Had сontraception: ']
+
+const types = ['Type of sex: ']
+
+const withoutCon = ['Had fun without contraception. Beware! ']
 
 const dateFormat = (date: string) => moment(Number(date)).fromNow()
 
@@ -132,6 +137,21 @@ const FeedList = () => {
                           )}`
                         : punchesHand[getRandomInt(0, punches.length)]}
                     </div>
+                    <div className={styles.types}>
+                      {i.types ? `${
+                          types[getRandomInt(0, types.length)]
+                        } ${i.types.map(
+                        (item, index) => (index ? ' ' : '') + item
+                        )}`: ''}
+                    </div>
+                    <div className={styles.contraceptive}>
+                      {i.contraceptive ? `${
+                          withCon[getRandomInt(0, withCon.length)]
+                        } ${i.contraceptive.map(
+                        (item, index) => (index ? ' ' : '') + item
+                        )}`
+                        : withoutCon[getRandomInt(0, withoutCon.length)]}
+                    </div>
                     <div className={styles.timestamp}>
                       {dateFormat(i.timestamp)}
                     </div>
@@ -152,6 +172,11 @@ const FeedList = () => {
                         }}
                       />
                     )}
+                  </div>
+                  <div className={styles.tags}>
+                    {i.tags ? `${'#' + i.tags.map(
+                      (item, index) => (index ? ' #' : '') + item
+                    )}`: ''}
                   </div>
                 </div>
               )

@@ -19,6 +19,37 @@ interface IProps {
   add: (item: INote) => void
 }
 
+const safety = () => {
+  return (
+    <FormGroup row>
+      <FormControlLabel
+        value="start"
+        control={<Checkbox color="secondary" />}
+        label="Interrupted act"
+        labelPlacement="start"
+      />
+      <FormControlLabel
+        value="start"
+        control={<Checkbox color="secondary" />}
+        label="Condoms"
+        labelPlacement="start"
+      />
+      <FormControlLabel
+        value="Pills"
+        control={<Checkbox color="secondary" />}
+        label="Pills"
+        labelPlacement="start"
+      />
+      <FormControlLabel
+        value="start"
+        control={<Checkbox color="secondary" />}
+        label="Other"
+        labelPlacement="start"
+      />
+    </FormGroup>
+  )
+}
+
 const AddSexNote = ({ add }: IProps) => {
   const [note, setNote] = React.useState<INote | undefined>(undefined)
   const [sexNote, setSexNote] = React.useState<string | undefined>(undefined)

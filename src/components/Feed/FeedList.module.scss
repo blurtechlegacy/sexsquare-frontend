@@ -1,6 +1,7 @@
 @import '../../assets/bindings';
 
 .listContainer {
+
 }
 .sexNote {
   background-color: $bg-gray-l;
@@ -17,11 +18,40 @@
   margin-right: 20px;
 }
 .message {
+  width: 60%;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.contraceptive{
+  text-align: left;
+  width: 60%;
+}
+
+.types{
+  width: 40%;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.tags{
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  padding: $default-spacer;
+  flex-direction: row;
 }
 .timestamp {
+  text-align: right;
+  width: 40%;
 }
 .note {
   display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
   justify-content: space-between;
   padding: $default-spacer;
+  flex-direction: row;
 }
