@@ -37,7 +37,7 @@ const safety = () => {
       <FormControlLabel
         value="Pills"
         control={<Checkbox color="secondary" />}
-        label="Anal"
+        label="Pills"
         labelPlacement="start"
       />
       <FormControlLabel

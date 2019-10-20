@@ -37,6 +37,13 @@ const developers = [
     nickname: 'tnnNull',
     info: 'Frontend developer',
     image: '../assets/images/developers/tnnNull.jpg',
+  },
+  {
+    firstname: 'Danil',
+    lastname: 'Tankov',
+    nickname: 'evist01',
+    info: 'Frontend developer',
+    image: '../assets/images/developers/DanTankov.jpg',
   }
 ]
 
